@@ -19,7 +19,7 @@
 
       <p class="lede">
         Lightning-fast sites for local trades and small business. The precision of
-        30 years in public-safety software, applied to your phone-first storefront.
+        30 years in public-safety software, applied to your online business presence.
       </p>
 
       <div class="cta-row">
@@ -58,7 +58,7 @@
           <div class="buzz-tooltip">Pixel-perfect</div>
         </div>
         <div class="buzz-node node-4">
-          <div class="buzz-tooltip">SEO optimized</div>
+          <div class="buzz-tooltip">Friendly service</div>
         </div>
       </div>
     </div>
@@ -184,5 +184,78 @@
     .visual {
       display: none;
     }
+  }
+
+  h1.brand {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(3.5rem, 10vw, 6rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin-bottom: var(--space-2);
+    color: var(--color-text);
+  }
+
+  h2.tagline {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-4);
+    max-width: 24ch;
+    color: var(--color-text-dim);
+  }
+
+  h2.tagline .accent {
+    color: var(--color-accent);
+  }
+
+  .lede {
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    line-height: 1.6;
+    color: var(--color-text-dim);
+    max-width: 62ch;
+    margin-bottom: var(--space-6);
+  }
+
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .cta-primary {
+    background: var(--color-accent);
+    color: var(--color-bg);
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 12px 28px;
+    border: 2px solid var(--color-accent);
+    border-radius: 0;
+    box-shadow: 0 4px 14px rgba(90, 200, 250, 0.15);
+    transition: all 150ms ease;
+    cursor: pointer;
+  }
+
+  .cta-primary:hover,
+  .cta-primary:focus-visible {
+    background: transparent;
+    color: var(--color-accent);
+    box-shadow: 0 6px 20px rgba(90, 200, 250, 0.25);
+    transform: translateY(-2px);
+  }
+
+  .cta-meta {
+    font-family: var(--font-mono);
+    color: var(--color-text-dim);
+    font-size: 0.9rem;
+  }
+
+  .cta-meta strong {
+    color: var(--color-text);
+    font-weight: 700;
   }
 </style>
