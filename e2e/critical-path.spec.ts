@@ -19,11 +19,11 @@ test.describe('Billy Webs homepage', () => {
     await page.waitForLoadState('networkidle');
   });
 
-  test('renders the hero with the customers tagline', async ({ page }) => {
-    const heading = page.getByRole('heading', { level: 2 });
+  test('renders the hero with the weave your web tagline', async ({ page }) => {
+    const heading = page.locator('#hero-heading');
     await expect(heading).toBeVisible();
-    await expect(heading).toContainText('customers');
-    await expect(heading).toContainText('instead of headaches');
+    await expect(heading).toContainText(/weave your web/i);
+    await expect(heading).toContainText(/catch more leads/i);
   });
 
   test('renders all five sections (hero, portfolio, process, contact, footer)', async ({
