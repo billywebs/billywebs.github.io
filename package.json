@@ -1,0 +1,31 @@
+{
+  "name": "billy-webs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test --project=headless",
+    "test:e2e:visual": "playwright test --project=visual",
+    "test:e2e:regression": "playwright test --project=regression",
+    "test:e2e:headed": "playwright test --project=headless --headed",
+    "test:qa": "vitest run && playwright test --project=headless && playwright test --project=regression && playwright test --project=visual"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@sveltejs/adapter-static": "^3.0.6",
+    "@sveltejs/kit": "^2.8.0",
+    "@sveltejs/vite-plugin-svelte": "^7.0.0",
+    "@types/node": "^22.7.0",
+    "svelte": "^5.1.0",
+    "svelte-check": "^4.0.0",
+    "typescript": "^5.6.0",
+    "vite": "^8.0.0",
+    "vitest": "^3.0.0"
+  }
+}
