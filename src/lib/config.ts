@@ -6,7 +6,7 @@
  *    and show a friendly "form not yet configured" message instead of POSTing.
  */
 export const WEB3FORMS_KEY: string =
-  import.meta.env.VITE_WEB3FORMS_KEY ?? 'PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE';
+  import.meta.env.VITE_WEB3FORMS_KEY ?? '30114688-6116-4f66-8e13-d3d5dc1f639d';
 
 export const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 

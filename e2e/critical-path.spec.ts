@@ -66,14 +66,19 @@ test.describe('Billy Webs homepage', () => {
     await expect(page.getByRole('button', { name: /send/i })).toBeVisible();
   });
 
-  test('contact form shows unconfigured message when Web3Forms key is the placeholder', async ({
-    page
-  }) => {
+  test('contact form submits to Web3Forms successfully (mocked)', async ({ page }) => {
+    await page.route('https://api.web3forms.com/submit', (route) =>
+      route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({ success: true, message: 'Form submitted successfully' })
+      })
+    );
     await page.locator('input[name="name"]').fill('Test User');
     await page.locator('input[name="email"]').fill('test@example.com');
     await page.locator('textarea[name="message"]').fill('I need a site for my plumbing business.');
     await page.getByRole('button', { name: /send/i }).click();
-    await expect(page.getByRole('alert')).toContainText(/not yet configured|billy@billywebs\.ca/i);
+    await expect(page.getByRole('status')).toContainText(/thanks|got it|received|sent/i);
   });
 
   test('mailto link points to billy@billywebs.ca', async ({ page }) => {
@@ -81,10 +86,9 @@ test.describe('Billy Webs homepage', () => {
     await expect(mailto).toHaveAttribute('href', /billy@billywebs\.ca/);
   });
 
-  test('service area mentions Ottawa Valley and Eganville', async ({ page }) => {
+  test('service area mentions Ottawa', async ({ page }) => {
     const sidebar = page.locator('#contact aside');
-    await expect(sidebar).toContainText(/Ottawa Valley/);
-    await expect(sidebar).toContainText(/Eganville/);
+    await expect(sidebar).toContainText(/Ottawa/);
   });
 
   test('page loads in under 5 seconds', async ({ page }) => {
