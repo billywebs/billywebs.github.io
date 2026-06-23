@@ -26,14 +26,14 @@ The following templates represent confirmed good, live implementations. When Bil
    - Source: `https://billybell991.github.io/ryan_peplinskie_photography/`
 4. **Billy Webs Portfolio** (`agency` / `b2b`)
    - Style: Midnight navy tech vibe, minimal bento grids, strict Svelte scoped CSS.
-   - Source: `http://billywebs.ca` (Current Repo)
+   - Source: <https://billywebs.ca> (current repo)
 
 ---
 
 ## Template: Billy Webs Portfolio
 
-**Status:** In development — not yet confirmed good
-**Live URL:** TBD (`billywebs.ca`)
+**Status:** Live and confirmed good
+**Live URL:** <https://billywebs.ca>
 **Repo:** `billywebs/billywebs.github.io` (planned)
 
 ### Color palette
